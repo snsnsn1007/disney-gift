@@ -260,7 +260,8 @@ body {
 
 .account-id-display {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
 }
 
 .account-id-display input {
@@ -275,14 +276,22 @@ body {
 }
 
 .copy-button {
-  padding: 12px 20px;
-  background: var(--primary-blue);
-  color: var(--white);
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .copy-button:hover {
@@ -427,50 +436,4 @@ body {
   .ticket-dialog h2 {
     font-size: 1.6em;
   }
-}
-
-/* === COPY ICON STYLES === */
-
-.id-copy {
-  display: inline-block;
-  vertical-align: middle;
-  color: #333;
-  line-height: 1;
-  position: relative;
-  width: 0.63em;
-  height: 0.9em;
-  background: #fff;
-  border: 0.1em solid currentColor;
-  border-radius: 0.1em;
-  box-sizing: content-box;
-  box-shadow: -0.2em 0.2em 0 -0.1em #fff, -0.2em 0.2em 0 0 currentColor;
-}
-
-.id-copy > span {
-  content: '';
-  position: absolute;
-  top: -0.1em;
-  left: 50%;
-  width: 0.315em;
-  height: 0.315em;
-  border: 0.1em solid currentColor;
-  border-top: 0;
-  border-right: 0;
-  border-radius: 0 0 0 0.1em;
-  box-sizing: content-box;
-  overflow: hidden;
-}
-
-.id-copy > span::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 0.44548em;
-  height: 0.1em;
-  background: currentColor;
-  transform: rotate(45deg);
-  transform-origin: left top;
-  box-shadow: 0 -0.1575em 0 0.1575em #fff;
 }
